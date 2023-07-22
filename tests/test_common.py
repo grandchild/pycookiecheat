@@ -41,6 +41,7 @@ def test_cookie_as_cookie_file_line(
             ],
         ),
         ("localhost", ["localhost"]),
+        ("127.0.0.1", ["127.0.0.1"]),
     ],
 )
 def test_generate_host_keys(host: str, host_keys: Iterable[str]) -> None:

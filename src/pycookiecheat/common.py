@@ -46,9 +46,9 @@ def generate_host_keys(hostname: str) -> Iterator[str]:
     foo.example.com
     .foo.example.com
 
-    Treat "localhost" explicitly by returning only itself.
+    Treat "localhost" & "127.0.0.1" explicitly by returning only itself.
     """
-    if hostname == "localhost":
+    if hostname in ["localhost", "127.0.0.1"]:
         yield hostname
         return
 
